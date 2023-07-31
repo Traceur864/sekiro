@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Project } from 'src/app/models/project';
+import { Project } from '../../models/project';
 import { ProjectService } from 'src/app/services/project.service';
 import { Global } from 'src/app/services/global';
 
@@ -11,9 +11,15 @@ import { Global } from 'src/app/services/global';
 })
 export class ProjectsComponent implements OnInit{
 
+public projects: Project[] | undefined;
+public url: string;
+
   constructor(
     private _projectService: ProjectService
-  ){}
+  )
+  {
+    this.url = Global.url;
+  }
 
   ngOnInit() {
       this.getProjects();
@@ -22,7 +28,9 @@ export class ProjectsComponent implements OnInit{
   getProjects(){
     this._projectService.getProjects().subscribe(
       response =>{
-        console.log(response);
+        if(response.projects){
+            this.projects = response.projects;
+        }
         
       },
       error =>{

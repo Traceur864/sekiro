@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="project">
     <h2>{{title}}</h2>
 
     <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
@@ -42,7 +42,7 @@
         <input type="submit" value="Enviar" [disabled]="!projectForm.form.valid">
     </form>
     <br>
-    <div class="message success" *ngIf="status == 'success'">El Proyecto se a creado correctamente, velo <a href="#">aqui</a></div>
+    <div class="message success" *ngIf="status == 'success' && project">El Proyecto se a creado correctamente, velo <a [routerLink]="['/proyecto', 'save_project._id']">aqui</a></div>
 
     <div class="message failed" *ngIf="status == 'failed'">El Proyecto no se ha podido crear</div>
 </div>

@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProjectService } from 'src/app/services/project.service';
 import { UploadService } from 'src/app/services/upload.service';
 import { Global } from 'src/app/services/global';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+
 
 @Component({
   selector: 'app-create',
@@ -17,6 +19,7 @@ export class CreateComponent implements OnInit {
   public save_project: any;
   public status: string | undefined;
   public filesToUpload: Array<File> = [];
+  public url: string;
 
   constructor(
     private _projectService: ProjectService,
@@ -24,6 +27,7 @@ export class CreateComponent implements OnInit {
   ){
     this.title = "Crear proyecto";
     this.project = new Project('','','','',2023,'','');
+    this.url = Global.url;
   }
 
   ngOnInit(): void {
@@ -63,7 +67,6 @@ export class CreateComponent implements OnInit {
 
   fileChangeEvent(fileInput: any){
     this.filesToUpload = <Array<File>>fileInput.target.files;
-    
   }
     
     

@@ -1,0 +1,12 @@
+.container-fluid{
+    margin-top: 3px;
+}
+
+.container-fluid li{
+    margin-right: 10px;
+}
+
+.col-lg-12{
+    margin-top: 15px;
+    margin-left: 15px;
+}

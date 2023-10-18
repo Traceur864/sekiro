@@ -13,6 +13,8 @@ import { AnimalsComponent } from './components/animals/animals.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { KeepersComponent } from './components/keepers/keepers.component';
+import { GuardarEmailComponent } from './moduloEmail/guardar-email/guardar-email.component';
+import { MostrarEmailComponent } from './moduloEmail/mostrar-email/mostrar-email.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { KeepersComponent } from './components/keepers/keepers.component';
     AnimalsComponent,
     ContactComponent,
     HomeComponent,
-    KeepersComponent
+    KeepersComponent,
+    GuardarEmailComponent,
+    MostrarEmailComponent
   ],
   imports: [
     BrowserModule,

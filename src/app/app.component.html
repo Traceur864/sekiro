@@ -33,19 +33,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" [routerLink]="['/home']"><i class="bi bi-house" style="margin-right: 5px;"></i>Inicio</a>
+          <a class="nav-link active" aria-current="page" [routerLink]="['/home']" [routerLinkActive]="['active']"><i class="bi bi-house" style="margin-right: 5px;"></i>Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/animales']"><i class="bi bi-star" style="margin-right: 5px;"></i>Animales</a>
+          <a class="nav-link" [routerLink]="['/animales']" [routerLinkActive]="['active']"><i class="bi bi-star" style="margin-right: 5px;"></i>Animales</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/cuidadores']"><i class="bi bi-person-square" style="margin-right: 5px;"></i>Cuidadores</a>
+          <a class="nav-link" [routerLink]="['/cuidadores']" [routerLinkActive]="['active']"><i class="bi bi-person-square" style="margin-right: 5px;"></i>Cuidadores</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/tienda']"><i class="bi bi-shop" style="margin-right: 5px;"></i>Tienda</a>
+          <a class="nav-link" [routerLink]="['/tienda']" [routerLinkActive]="['active']"><i class="bi bi-shop" style="margin-right: 5px;"></i>Tienda</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/contacto']"><i class="bi bi-envelope" style="margin-right: 5px;"></i>Contacto</a>
+          <a class="nav-link" [routerLink]="['/contacto']" [routerLinkActive]="['active']"><i class="bi bi-envelope" style="margin-right: 5px;"></i>Contacto</a>
         </li>
         <li class="hidden">
           <span *ngIf="emailContacto"><strong>Email de Contacto:</strong>{{emailContacto}}

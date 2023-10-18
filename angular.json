@@ -31,7 +31,11 @@
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "node_modules/jquery/dist/jquery.min.js"
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/tinymce/tinymce.js",
+              "node_modules/tinymce/themes/silver/theme.js",
+              "node_modules/tinymce/plugins/link/plugin.js",
+              "node_modules/tinymce/plugins/table/plugin.js"
             ]
           },
           "configurations": {

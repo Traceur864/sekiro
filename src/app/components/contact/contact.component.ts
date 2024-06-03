@@ -8,7 +8,7 @@ import { Component, OnInit} from '@angular/core';
 export class ContactComponent implements OnInit{
 
   title = 'Contacto';
-  emailContacto!: string;
+  emailContact!: string;
 
   ngOnInit(): void {
       console.log('Contact working');
@@ -16,7 +16,7 @@ export class ContactComponent implements OnInit{
 
   guardarEmail(){
     //console.log(this.emailContacto);
-    localStorage.setItem('emailContacto', this.emailContacto);    
+    localStorage.setItem('emailContact', this.emailContact);    
   }
 
 }

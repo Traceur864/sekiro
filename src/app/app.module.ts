@@ -5,6 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 
+
+
+// Importar nuevo modulo
+import { ModuloEmailModule } from './moduleEmail/moduleemail';
+import { AdminModule } from './admin/components/admin-module';
+
 //Components
 import { AppComponent } from './app.component';
 import { TiendaComponent } from './components/tienda/tienda.component';
@@ -13,9 +19,7 @@ import { AnimalsComponent } from './components/animals/animals.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { KeepersComponent } from './components/keepers/keepers.component';
-import { GuardarEmailComponent } from './moduloEmail/guardar-email/guardar-email.component';
-import { MostrarEmailComponent } from './moduloEmail/mostrar-email/mostrar-email.component';
-
+import { ProvesComponent } from './proves/proves.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,15 +29,16 @@ import { MostrarEmailComponent } from './moduloEmail/mostrar-email/mostrar-email
     ContactComponent,
     HomeComponent,
     KeepersComponent,
-    GuardarEmailComponent,
-    MostrarEmailComponent
+    ProvesComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ModuloEmailModule,
+    AdminModule
   ],
   providers: [
     

@@ -8,7 +8,7 @@ import { AnimalsComponent } from './components/animals/animals.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { KeepersComponent } from './components/keepers/keepers.component';
-
+import { ProvesComponent } from './proves/proves.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -18,6 +18,7 @@ const routes: Routes = [
   {path: 'contacto', component: ContactComponent},
   {path: 'cuidadores', component: KeepersComponent},
   {path: 'tienda', component: TiendaComponent},
+  {path: 'calculadora', component:ProvesComponent},
   {path: ' * * ', component: HomeComponent}
   /* {path: 'Sobre-mi', component: AboutComponent},
   {path: 'Proyectos', component: ProjectsComponent},

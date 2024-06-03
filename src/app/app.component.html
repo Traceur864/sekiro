@@ -47,10 +47,6 @@
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['/contacto']" [routerLinkActive]="['active']"><i class="bi bi-envelope" style="margin-right: 5px;"></i>Contacto</a>
         </li>
-        <li class="hidden">
-          <span *ngIf="emailContacto"><strong>Email de Contacto:</strong>{{emailContacto}}
-            <button (click)="borrarEmail()">Eliminar email</button></span>
-        </li>
       </ul>
       <!-- <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -70,6 +66,6 @@
 
 
 
-<footer>
+<footer style="margin-left: 1%; margin-top: 2%;">
   Pagina reservada por Edwin Carpio &copy;
 </footer>

@@ -13,7 +13,8 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       state('active', style({
         border:'5px solid yellow',
         background: 'red',
-        borderRadius: '50px'
+        borderRadius: '50px',
+        transform: 'sacle(1.2)'
       })),
       transition('inactive => active', animate('3s linear')),
       transition('active => inactive', animate('3s linear'))
@@ -22,12 +23,22 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 })
 export class TiendaComponent implements OnInit{
 
-  public titulo;
+  public titulo: any;
   public nombreDelParque: string | undefined;
   public miParque: any;
+  public status: any;
 
   constructor(){
     this.titulo = 'Tienda';
+    this.status = 'inactive';
+  }
+
+  cambiarEstado(status:any){
+    if(status == 'inactive'){
+      this.status = 'active';
+    }else{
+      this.status = 'inactive';
+    }
   }
 
   ngOnInit(): void {

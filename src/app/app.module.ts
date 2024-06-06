@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 
@@ -20,29 +22,24 @@ import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { KeepersComponent } from './components/keepers/keepers.component';
 import { ProvesComponent } from './proves/proves.component';
-@NgModule({
-  declarations: [
-    AppComponent,
-    TiendaComponent,
-    ParquesComponent,
-    AnimalsComponent,
-    ContactComponent,
-    HomeComponent,
-    KeepersComponent,
-    ProvesComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    FormsModule,
-    RouterModule,
-    AppRoutingModule,
-    ModuloEmailModule,
-    AdminModule
-  ],
-  providers: [
-    
-  ],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        TiendaComponent,
+        ParquesComponent,
+        AnimalsComponent,
+        ContactComponent,
+        HomeComponent,
+        KeepersComponent,
+        ProvesComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        FormsModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        RouterModule,
+        AppRoutingModule,
+        ModuloEmailModule,
+        AdminModule], providers: [
+        
+    ] })
 export class AppModule { }

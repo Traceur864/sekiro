@@ -1,6 +1,8 @@
 
 <a class="boton_activo btn btn-success"
-[@marcar]="'inactive'">Activar boton</a>
+[@marcar]="status" (click)="cambiarEstado(status)">
+<span *ngIf="status == 'inactive'">Boton inactivo</span>
+<span *ngIf="status == 'active'">Boton activo</span></a>
 
 <hr>
 <h4>Animaciones CSS3</h4>
